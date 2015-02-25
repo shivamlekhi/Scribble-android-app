@@ -1,1 +1,1 @@
-"Scribble Android App" 
+Scribble Android App 
