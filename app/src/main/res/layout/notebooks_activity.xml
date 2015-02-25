@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/notebook_holder_layout"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true"
+        android:layout_width="fill_parent"
+        android:layout_height="500dp">
+
+        <LinearLayout
+            android:layout_below="@+id/new_notebook_popup"
+            android:id="@+id/notebooks_holder"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:orientation="vertical"
+            android:weightSum="4"
+            android:layout_width="fill_parent"
+            android:layout_height="500dp">
+
+            <LinearLayout
+                android:baselineAligned="false"
+                android:weightSum="2"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp">
+
+                <RelativeLayout
+                    android:id="@+id/book1"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent">
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:weightSum="2">
+
+
+                    <RelativeLayout
+                        android:id="@+id/book2"
+                        android:layout_weight="1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp">
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/book3"
+                        android:layout_weight="1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp">
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/book4"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent">
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/book5"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent">
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp">
+
+                <RelativeLayout
+                    android:id="@+id/book6"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/book7"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent">
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:baselineAligned="false"
+            android:weightSum="8"
+            android:background="#fff"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:id="@+id/new_notebook_popup"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp">
+
+
+            <EditText
+                android:layout_weight="6.5"
+                android:id="@+id/new_notebook_input"
+                android:textColor="#2e2e2e"
+                android:textColorHint="#aaa"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:hint="Please Choose A Name "
+                android:background="@drawable/custom_edittext"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"/>
+
+            <ImageButton
+                android:id="@+id/BookNameDoneButton"
+                android:padding="10dp"
+                android:src="@drawable/tick"
+                android:background="#f56c5e"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_height="fill_parent"/>
+        </LinearLayout>
+
+        <View
+            android:visibility="gone"
+            android:layout_below="@+id/new_notebook_popup"
+            android:id="@+id/new_notebook_overlay"
+            android:alpha="0.4"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#aaa"/>
+    </RelativeLayout>
+
+        <LinearLayout
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:orientation="vertical"
+            android:id="@+id/more_notebooks_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            </LinearLayout>
+    </LinearLayout>
+</ScrollView>

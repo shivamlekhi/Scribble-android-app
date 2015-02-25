@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="default_brush_color">#ffea9b8d</color>
+    <color name="nice_color">#0ABFBC</color>
+    <color name="nice_color_light">#960abfbc</color>
+    <color name="active_tool_color">#ddd</color>
+</resources>

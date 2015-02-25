@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/add_notebook_action"
+        android:showAsAction="always"
+        android:title="Add NoteBook"
+        android:icon="@drawable/plus"/>
+
+    <item
+        android:id="@+id/view_zoomer"
+        android:title="Show Image Viewer"/>
+
+</menu>

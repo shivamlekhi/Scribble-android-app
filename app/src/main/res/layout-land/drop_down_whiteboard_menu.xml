@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center|bottom"
+    android:textSize="16sp">
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="140dp"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:text="OPEN PANEL"
+        android:background="@color/nice_color">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/whiteboard_book_name"
+                android:layout_marginLeft="10dp"
+                android:textColor="#fff"
+                android:textSize="28dp"
+                android:text="NOTEBOOK NAME"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" />
+
+            <at.markushi.ui.CircleButton
+                app:cb_color="#ff9ae9e9"
+                android:padding="10dp"
+                app:cb_pressedRingWidth="3dip"
+                android:visibility="visible"
+                android:id="@+id/share_button"
+                android:src="@drawable/share_icon"
+                android:layout_height="50dp"
+                android:layout_width="50dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/PageCountLayout"
+                android:layout_width="fill_parent"
+                android:weightSum="6"
+                android:layout_height="fill_parent">
+
+                <at.markushi.ui.CircleButton
+                    app:cb_color="#ff9ae9e9"
+                    app:cb_pressedRingWidth="3dip"
+                    android:visibility="visible"
+                    android:id="@+id/delete_all_button"
+                    android:src="@drawable/delete_all"
+                    android:layout_height="fill_parent"
+                    android:padding="8dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"/>
+
+                <at.markushi.ui.CircleButton
+                    app:cb_color="#ff9ae9e9"
+                    app:cb_pressedRingWidth="3dip"
+                    android:id="@+id/prev_page_button"
+                    android:padding="10dp"
+                    android:src="@drawable/arrow_left"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent" />
+
+                <TextView
+                    android:textColor="#ff9ae9e9"
+                    android:id="@+id/page_count_text"
+                    android:text="Page 2/2"
+                    android:gravity="center"
+                    android:textSize="26dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="fill_parent" />
+
+                <at.markushi.ui.CircleButton
+                    app:cb_color="#ff9ae9e9"
+                    app:cb_pressedRingWidth="3dip"
+                    android:id="@+id/next_page_button"
+                    android:padding="10dp"
+                    android:src="@drawable/arrow_right"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent" />
+
+                <at.markushi.ui.CircleButton
+                    app:cb_color="#ff9ae9e9"
+                    app:cb_pressedRingWidth="3dip"
+                    android:padding="8dp"
+                    android:visibility="visible"
+                    android:id="@+id/save_button"
+                    android:src="@drawable/save"
+                    android:layout_height="fill_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="bottom"
+        android:weightSum="2"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="68dp">
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:weightSum="8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:visibility="visible"
+                android:layout_width="60dp"
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_height="fill_parent"
+                android:src="@drawable/arrow_right"
+                android:alpha="0.5"
+                android:padding="5dp">
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:background="#fff"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_weight="2"
+            android:weightSum="13"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp">
+
+            <at.markushi.ui.CircleButton
+                android:layout_margin="3dp"
+                android:background="#fff"
+                android:visibility="visible"
+                android:id="@+id/pencil_button"
+                android:src="@drawable/pencil"
+                app:cb_color="#ffb9d6dd"
+                app:cb_pressedRingWidth="3dip"
+                android:padding="10dp"
+                android:layout_height="fill_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"/>
+
+            <at.markushi.ui.CircleButton
+                android:layout_margin="2dp"
+                android:background="#fff"
+                android:visibility="visible"
+                android:id="@+id/eraser_tool"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                app:cb_color="#fffbb2b1"
+                app:cb_pressedRingWidth="3dip"
+                android:layout_height="fill_parent"
+                android:src="@drawable/eraser"
+                android:padding="10dp"
+                />
+
+            <at.markushi.ui.CircleButton
+                android:layout_margin="2dp"
+                app:cb_color="#ff86f4bb"
+                app:cb_pressedRingWidth="3dip"
+                android:padding="10dp"
+                android:visibility="visible"
+                android:id="@+id/background_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:layout_height="fill_parent"
+                android:src="@drawable/gallery"
+                />
+
+            <at.markushi.ui.CircleButton
+                android:layout_margin="2dp"
+                app:cb_color="#fffceaab"
+                app:cb_pressedRingWidth="3dip"
+                android:background="#fff"
+                android:padding="10dp"
+                android:visibility="visible"
+                android:id="@+id/brush_tool"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:src="@drawable/brush"
+                />
+
+            <at.markushi.ui.CircleButton
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                app:cb_color="#ffcdddd5"
+                app:cb_pressedRingWidth="3dip"
+                android:background="#fff"
+                android:visibility="visible"
+                android:id="@+id/undo_button"
+                android:layout_height="fill_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/undo"
+                />
+
+            <at.markushi.ui.CircleButton
+                android:layout_margin="2dp"
+                app:cb_color="#ffcdddd5"
+                app:cb_pressedRingWidth="3dip"
+                android:padding="10dp"
+                android:background="#fff"
+                android:visibility="visible"
+                android:id="@+id/redo_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:src="@drawable/redo"
+                android:alpha="1"
+                />
+
+            <ImageView
+                android:background="@color/nice_color"
+                android:padding="5dp"
+                android:visibility="visible"
+                android:id="@+id/open_menu_whiteboard"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:src="@drawable/dropdown"
+                />
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:weightSum="6"
+                android:layout_weight="6"
+                android:layout_height="fill_parent">
+
+                    <LinearLayout
+                        android:clickable="true"
+                        android:background="@drawable/drop_shadow_rectangle"
+                        android:visibility="visible"
+                        android:id="@+id/pick_color_button"
+                        android:layout_width="30dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:layout_height="fill_parent"
+                        android:padding="7dp">
+
+                        <View
+                            android:id="@+id/color_indicator_layout"
+                            android:background="@color/default_brush_color"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" />
+                    </LinearLayout>
+
+                    <com.widgets.VerticalSeekBar
+                        android:visibility="gone"
+                        android:layout_below="@+id/pick_color_button"
+                        android:id="@+id/brush_size_bar"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="fill_parent" />
+
+                    <SeekBar
+                        android:id="@+id/horizontal_brush_sizebar"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="8dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

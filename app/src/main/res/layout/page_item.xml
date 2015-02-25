@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:id="@+id/page_item_main_Layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/drop_shadow_rectangle">
+
+    <ImageView
+        android:id="@+id/page_front_image"
+        android:scaleType="fitXY"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#2e2e2e"
+        android:alpha="0.2"/>
+    <RelativeLayout
+        android:id="@+id/page_bottom_layout"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp">
+
+
+        <ImageButton
+            android:padding="10dp"
+            android:background="@drawable/drop_shadow_rectangle"
+            android:id="@+id/delete_page_button"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/delete_all"
+            android:scaleType="centerCrop"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+    </RelativeLayout>
+</RelativeLayout>

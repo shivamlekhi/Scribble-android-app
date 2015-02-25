@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:weightSum="6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/tour_item_image"
+        android:padding="10dp"
+        android:src="@drawable/notebooks"
+        android:layout_weight="4.5"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp" />
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        />
+
+    <RelativeLayout
+        android:layout_marginTop="-10dp"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp">
+
+        <View
+            android:background="@drawable/circle"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_weight="1.5"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/tour_item_title"
+            android:textColor="@color/nice_color"
+            android:gravity="center|top"
+            android:text="TITLE"
+            android:textSize="22dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tour_item_dessription"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#aaa"
+            android:text="@string/lipsum"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

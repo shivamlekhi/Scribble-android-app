@@ -1,0 +1,130 @@
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    sothree:panelHeight="68dp"
+    sothree:shadowHeight="4dp">
+
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="8"
+        android:id="@+id/drawpanel"
+        tools:context=".WhiteBoardActivity">
+        <RelativeLayout
+            android:animateLayoutChanges="true"
+            android:id="@+id/MainWhiteBoardLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/whiteboard_background_image"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <com.leag.scratchpad.DrawingView
+                android:id="@+id/drawing_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"/>
+            <Button
+                android:text=">"
+                android:id="@+id/move_right_button"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/zoomer_main_layout"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <View
+                    android:id="@+id/whiteboard_zoom_listener"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_marginRight="10dp"
+            android:id="@+id/whiteboard_sidebar"
+            android:layout_alignParentRight="true"
+            android:animateLayoutChanges="true"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content">
+
+            <at.markushi.ui.CircleButton
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/dropdown"
+                android:padding="15dp"
+                app:cb_color="#ff9ae9e9"
+                app:cb_pressedRingWidth="3dip"
+                android:id="@+id/show_zoom_view"
+                android:layout_alignParentBottom="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:animateLayoutChanges="true"
+                android:id="@+id/active_tool_holder"
+                android:padding="5dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/brush_size_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/brush"
+                    android:padding="5dp"
+                    />
+
+                <LinearLayout
+                    android:background="@drawable/drop_shadow_rectangle"
+                    android:visibility="visible"
+                    android:id="@+id/pick_color_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:padding="7dp">
+
+                    <View
+                        android:id="@+id/color_indicator_layout"
+                        android:background="@color/default_brush_color"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" />
+                </LinearLayout>
+
+                <com.widgets.VerticalSeekBar
+                    android:layout_below="@+id/pick_color_button"
+                    android:id="@+id/brush_size_bar"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--End-->
+    </RelativeLayout>
+
+    <include layout="@layout/drop_down_whiteboard_menu" />
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
